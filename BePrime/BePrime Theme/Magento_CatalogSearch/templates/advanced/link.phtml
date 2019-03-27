@@ -1,0 +1,17 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+ /** @var \Magento\CatalogSearch\Helper\Data $helper */
+$helper = $this->helper('Magento\CatalogSearch\Helper\Data');
+?>
+<div class="nested">
+    <a class="action advanced" href="<?= /* @escapeNotVerified */ $helper->getAdvancedSearchUrl() ?>" data-action="advanced-search">
+    <span data-tooltip tabindex="1" title="<?= /* @escapeNotVerified */ __('Advanced Search') ?>"> <i class="fas fa-search"></i> </span>
+        
+    </a>
+</div>

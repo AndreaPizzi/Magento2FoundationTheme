@@ -1,0 +1,17 @@
+<?php
+$_product = $block->getProduct(); // GET THE PRODUCT
+?>
+
+<div class="social-share-icons" data-role="wdm-social-icons">
+
+<!-- FACEBOOK -->
+<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($_product->getProductUrl());?>&t=<?php echo urlencode($_product->getName())?>" onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false' title="Share on FaceBook" data-tooltip tabindex="1" title="<?= /* @escapeNotVerified */ __('Share on Facebook') ?>" data-position="top" data-alignment="center">
+<i class="fab fa-facebook-square"></i>
+</a>
+
+<!-- TWITTER -->
+<a href="http://twitter.com/home/?status=<?php echo urlencode($_product->getProductUrl());?>(<?php echo urlencode($_product->getName())?>)" onclick='javascript:window.open(this.href,"","width=640,height=480,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes");return false' title="Share on Twitter" data-tooltip tabindex="1" title="<?= /* @escapeNotVerified */ __('Share on Twitter') ?>" data-position="top" data-alignment="center">
+<i class="fab fa-twitter-square"></i>
+</a>
+
+</div>

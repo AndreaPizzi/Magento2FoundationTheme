@@ -1,0 +1,38 @@
+
+<div class="grid-container full button_moreinfo_wrp">
+<div class="grid-x">
+<div class="sing_more_info_button cell small-12">
+        <button class="button_more_info" type="button" data-tooltip tabindex="1" title="<?= $block->escapeHtml(__('Ask more info for this product')) ?>" data-position="top" data-alignment="center">
+            <i class="fal fa-info-square"></i>
+        </button>
+    </div>
+</div>
+</div>
+<div class="grid-container banner_moreinfo_wrp">
+<div class="grid-x">
+    
+<?php 
+echo '<div class="sing_more_info_form cell small-12">';
+echo $block->getLayout()
+           ->createBlock('Magento\Cms\Block\Block')
+           ->setBlockId('contact_form_product')
+           ->toHtml();
+echo '</div>';
+
+?>
+</div>
+</div>
+
+<script type="text/javascript">
+
+require([
+        'jquery'
+    ], function ($) {
+        jQuery(document).ready(function () {
+            jQuery( ".sing_more_info_button" ).click(function() {
+                jQuery(".button_moreinfo_wrp").toggleClass( "form_button_Active" );
+                jQuery( ".sing_more_info_form" ).toggleClass( "form_Active" );
+            });
+        });
+    });
+</script>

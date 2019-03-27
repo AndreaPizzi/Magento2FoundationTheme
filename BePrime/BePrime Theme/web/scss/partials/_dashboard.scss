@@ -1,0 +1,133 @@
+.account-nav{
+    .item{
+        padding-bottom: .3125rem;
+        font-size: .8125rem;
+        &.current{
+            a,strong{
+                border-color: $dashboard_currennav;
+            }
+        }
+        .delimiter {
+            border-top: .0625rem solid $dashboard_delimiter;
+            margin: .625rem 1rem;
+        }
+    }
+}
+
+.dashboard-contents{
+    .block-dashboard-info{
+        .block-title {
+            text-align:left;
+        &>strong{
+            font-weight: 400;
+            font-size: 1.5rem;
+            text-align: left;
+        }
+
+        }
+    }
+    .title_bar{
+        @include flexbox;
+        margin-bottom:.8125rem;
+        border-bottom:.0625rem solid $dashboard_titlebarborder;
+        .box-title{
+            font-size: .75rem;
+            line-height: 1.125rem;
+            text-transform: uppercase;
+            color: $dashboard_edit;
+            font-weight: normal;
+            margin-bottom: .3125rem;
+            margin-top: .625rem;
+        }
+        .box-actions{
+            margin-top:.3125rem;
+            @include flexbox;
+            flex:1;
+            a.edit{
+                margin-left:auto;
+                margin-left: auto;
+                font-size: .8125rem;
+                line-height: 1.25rem;
+                margin-bottom: .625rem;
+            }
+        }
+    }
+
+    .block-content{
+        font-size: .8125rem;
+        line-height: 1.25rem;
+        color: $gray__dark;
+    }
+
+    form{
+        .fieldset{
+            border:0;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        .legend{
+            font-weight: bold;
+            font-size: .75REM;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: .5REM;
+            color: $dashboard_edit;
+            margin-left: 0;
+        }
+        .field{
+            @include flexbox;
+            flex-direction:column;
+            width:47%;
+            float:left;
+            margin-left: 1rem;
+            margin-bottom:0;
+            &.street{
+                width:96%;
+                @media (max-width: $breakpoint-tablet-landscape) {
+                    width:100%;
+                }
+            }
+            @media (max-width: $breakpoint-tablet-landscape) {
+                width:100%;
+            }
+            .label{
+                background-color:transparent;
+                color:$gray__dark;
+                width:100% !important;
+                text-align:left !important;
+                margin-bottom:.625rem;
+                height: 2.3rem;
+
+            }
+            .control{
+                width:100% !important;
+                input{
+                    min-height:2.4rem;
+                }
+                .nested{
+                    width:100%;
+                    .field{
+                        margin-left: 0px;
+                        margin-top:0px;
+                        width:100%;
+                    }
+                }
+            }
+        }
+        a.back{
+            margin-left:auto;
+            margin-left: auto;
+            font-size: .8125rem;
+            line-height: 1.25rem;
+            margin-bottom: .625rem;
+        }
+        .save{
+            font-size: 1rem !important;
+            text-transform: uppercase;
+            padding: .3125rem .5rem !important;
+            border: 0;
+            margin-left: 2rem !important;
+            line-height:1rem !important;
+        }
+    }
+}

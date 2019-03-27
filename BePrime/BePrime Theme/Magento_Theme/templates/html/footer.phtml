@@ -1,0 +1,61 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<div class="footer-container grid-container full">
+    <div class="footer grid-x grid-margin-x">
+        <?= $block->getChildHtml() ?>
+        <!-- First Column -->
+
+<?php 
+echo '<div class=" footer_block cell small-12 medium-3">';
+echo $block->getLayout()
+           ->createBlock('Magento\Cms\Block\Block')
+           ->setBlockId('footer_col_1')
+           ->toHtml();
+echo '</div>';
+
+?>
+<!-- Newsletter Column -->
+<div class="cell footer_block small-12 medium-6">
+
+<?php 
+echo '<div class="newsletter_wrp">';
+echo $block->getLayout()
+           ->createBlock('Magento\Cms\Block\Block')
+           ->setBlockId('footer_newsletter')
+           ->toHtml();
+echo '</div>';
+
+?>
+
+<!-- Social Column -->
+<?php 
+echo '<div class="social_wrp">';
+echo $block->getLayout()
+           ->createBlock('Magento\Cms\Block\Block')
+           ->setBlockId('footer_col_social')
+           ->toHtml();
+echo '</div>';
+
+?>
+</div>
+<!-- third Column -->
+<?php 
+echo '<div class="cell footer_block small-12 medium-3">';
+echo $block->getLayout()
+           ->createBlock('Magento\Cms\Block\Block')
+           ->setBlockId('footer_col_2')
+           ->toHtml();
+echo '</div>';
+
+?>
+
+        <address class="cell small-12 copyright"><?= /* @escapeNotVerified */ $block->getCopyright() ?></address>
+    </div>
+</div>

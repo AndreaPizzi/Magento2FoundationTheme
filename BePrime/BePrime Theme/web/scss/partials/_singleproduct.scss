@@ -1,0 +1,288 @@
+.page-layout-1column .product.media {
+    width: 46%;
+}
+.page-layout-1column .product-info-main {
+    width: 50%;
+}
+
+.page-title-wrapper{
+    padding-bottom: 4rem;
+    padding-top: 2rem;
+}
+
+/* Galleriy */
+
+.fotorama__stage{
+    border: .0625rem solid $gallery_border;
+    margin-bottom: 1rem;
+}
+.fotorama__thumb{
+    border: .0625rem solid $gallery_border;
+}
+.fotorama__thumb-border{
+    width: 5.75rem !important;
+    height: 5.75rem !important;
+    border: .0625rem solid $gallery_border__active;
+}
+
+
+/* Details */
+
+.product-info-price{
+    border-bottom:.0625rem solid $detailblock_divider;
+    .stock_label{
+        display: block;
+        font-size: .75rem;
+        font-weight: bold;
+        color: $stock_label;
+        margin: .3125rem 0;
+        float:left;
+    }
+    .stock{
+        display: inline-block;
+        font-size: .75rem;
+        font-weight: bold;
+        color: $stock_available;
+        margin-left: .375rem;
+        margin-top: .4375rem;
+    }
+    .sku{
+        .type{
+            display: block;
+            font-size: .75rem;
+            font-weight: bold;
+            color: $stock_label;
+            float:left;
+        }
+        .value{
+            color:$sku_text;
+            font-size: .75rem;
+        }
+    }
+    .product-info-stock-sku{
+        border-bottom:.0625rem solid $detailblock_divider;
+    }
+    .price-box{
+        .price{
+            color: $price;
+            font-weight: 600 !important;
+            font-size: 1.5rem !important;
+            line-height: 1.5rem; 
+        }
+    }
+    .overview{
+        font-size: .8125rem;
+        color:$product_description;
+    }
+}
+
+.product-add-form{
+    .box-tocart{
+        margin-top:0;
+        margin-bottom:0;
+        width:100%;
+        border-bottom:.0625rem solid $detailblock_divider;
+        .fieldset{
+            border:0px;
+            margin-top:0;
+            padding-left:0px;
+            padding-right:0px;
+            @include flexbox;
+            .qty{
+                @include flexbox;
+                margin-bottom:0;
+                .label{
+                    background-color:transparent;
+                    color:$product_qty;
+                    margin-right: .5rem;
+                    padding-top: .8rem;
+                    font-weight: 400;
+                }
+                .control{
+                    .qty{
+                        height: 2.438rem;
+                    }
+                }
+            }
+            .actions{
+                padding-top:0;
+                flex:1;
+                .tocart{
+                    font-size: 1rem;
+                    font-weight: 700;
+                    text-transform: none;
+                    line-height: 1rem;
+                    float:right;
+                }
+            }
+        }
+    }
+}
+/* Sharing */
+
+.product-social-links{
+
+    padding-bottom: .7rem;
+    border-bottom:.0625rem solid $detailblock_divider;
+
+    a{
+        color:$social_share;
+        border:0px;
+        @extend .animation_short;
+        i{
+            color:$social_share;
+        }
+        &:hover{
+            color:$social_share__hover;
+            &:before{
+                color:$social_share__hover;
+            }
+            i{
+                color:$social_share__hover;
+            }
+        }
+        &:active,&:focus, &:focus-within{
+            border:0px;
+        }
+    }
+
+    .reviews-actions{
+        .add{
+            font-size: 1rem;
+            &:before{
+                content: "\f044";
+                font-family: "Font Awesome 5 Pro";
+                color:$social_share;
+                font-weight:900;
+                margin-right: .5rem;
+                font-size: 1rem;
+                opacity:1;  
+            }
+        }
+    }
+}
+
+.action.mailto.friend {
+    margin-left: -.4375rem;
+    margin-top: .125rem;
+    font-size: 1.5rem;
+    margin-left: -.625rem;
+    &:before{
+        display:none;
+    }
+}
+.social-share-icons{
+    float:left;
+    min-width: 3.8rem;
+}
+
+
+.detailed.product{
+    padding-top: 6rem;
+    #description{
+        font-size: .8125rem;
+        color:$product_description;
+    }
+    .data.item.title{
+        a{
+            font-size: 1rem !important;
+            color:$producttab_title !important;
+            height: auto !important;
+            z-index: 99999 !important;
+            position: relative !important;
+            top: .0625rem !important;
+        }
+    }
+}
+
+/* Related */
+
+.related{
+    .block-content.content{
+        .block-actions{
+            color:$productrelated_title;
+            font-size: 1rem;
+        }
+    }
+}
+
+
+/* More info Form */
+
+.catalog-product-view{
+    .page-bottom{
+        min-width:100%;
+        padding-left:0;
+        padding-right:0;
+    }
+}
+
+.button_moreinfo_wrp{
+    @include flexbox;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color:$moreinfo_back;
+    cursor: pointer;
+    @extend .animation_short;
+    button{
+        font-size:3rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        color:$moreinfo_icon;
+        border:0;
+        cursor: pointer;
+        transform: rotate(0deg);
+        &:hover,&:focus,&:active{
+            background-color:transparent;
+        }
+    }
+    &:hover,&.form_button_Active{
+        background-color:$moreinfo_back__hover;
+        button{
+            color:$moreinfo_icon__hover;
+            background-color:transparent;
+            transform: rotate(25deg);
+        }
+    }
+}
+.banner_moreinfo_wrp{
+    background-color: $moreinfo_back;
+    max-width: 100%;
+}
+.sing_more_info_form{
+    display:block;
+    height:0rem;
+    max-height:0rem;
+    overflow:hidden;
+    @extend .animation_long;
+    &.form_Active{
+        height:auto;
+        max-height:100rem;
+        background-color:transparent;
+        padding-bottom: 3rem;
+        @extend .animation_long;
+    }
+
+    .fieldset{
+        border:0px;
+        .control{
+            width:100%;
+            min-width:100%;
+            input{
+                margin-bottom:0;
+            }
+        }
+        .legend, .no-label{
+            color:$moreinfo_form_txt;
+            text-align:center;
+            &:before{
+                display: none;
+            }
+        }
+    }
+    .actions-toolbar{
+        justify-content: center;
+        @include flexbox;
+    }
+}
